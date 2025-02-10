@@ -1,0 +1,190 @@
+/* Общие стили для контейнера */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ============ Секция регистрации (Signup) ============ */
+.section.signup-section {
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.signup__container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.signup__image {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.signup__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.signup__content {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.signup__headline {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #004677;
+}
+
+.signup__subheadline {
+  font-size: 1rem;
+  color: #333;
+}
+
+.signup__form {
+  margin-top: 20px;
+}
+
+.signup-form .form-field {
+  margin-bottom: 15px;
+}
+
+.signup-form input,
+.signup-form select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.signup__btn {
+  background-color: #004677;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup__btn:hover {
+  background-color: #00335a;
+}
+
+/* ============ Секция преимуществ (Benefits) ============ */
+.section.benefits-section {
+  padding: 80px 0;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+.benefits__container {
+  position: relative;
+}
+
+.benefits__headline {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #004677;
+  text-align: left;
+}
+
+.benefits-slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.benefits-slider .swiper-wrapper {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.benefits-slider .swiper-slide {
+  flex: 0 0 auto;
+  width: 300px;
+}
+
+.benefit-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+
+.benefit-card__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.benefit-card__title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #004677;
+}
+
+.benefit-card__num {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #69B3E7;
+}
+
+.benefit-card__desc {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Навигация слайдера преимуществ */
+.benefits-slider__nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.benefits-slider__btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.3s ease;
+}
+
+.benefits-slider__btn:hover {
+  transform: scale(1.1);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .signup__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefits-slider .swiper-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .benefit-card {
+    width: 100%;
+  }
+}

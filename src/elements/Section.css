@@ -1,0 +1,236 @@
+/* Общие стили для контейнера */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* ===========================
+     Секция Home (главный блок)
+     =========================== */
+  .section.home {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .home__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .home__bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .home__box {
+    position: relative;
+    z-index: 1;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .home__title p {
+    font-size: 2.5rem;
+    margin: 0;
+    line-height: 1.2;
+  }
+  
+  .text-16 {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .btn-with-arrow {
+    margin-top: 30px;
+    background-color: #fff;
+    color: #147BD1;
+    border: none;
+    padding: 10px 20px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-with-arrow:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .btn-with-arrow__icon {
+    margin-left: 10px;
+    display: flex;
+  }
+  
+  .home__social {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .home__social-link svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+  
+  .home__social-link:hover svg {
+    transform: scale(1.1);
+  }
+  
+  /* ===========================
+     Секция About (о сообществе)
+     =========================== */
+  .section.about {
+    padding: 80px 0;
+    background-color: #f7f7f7;
+    position: relative;
+  }
+  
+  /* Пример декоративных фонов (верхний и нижний куб) */
+  .bg-cube-top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('../images/cube.png') no-repeat top center;
+    background-size: cover;
+    z-index: -1;
+  }
+  
+  .bg-cube-bottom::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('../images/cube.png') no-repeat bottom center;
+    background-size: cover;
+    z-index: -1;
+  }
+  
+  .about__title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+  
+  .about__box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .about__left,
+  .about__right {
+    flex: 1 1 50%;
+  }
+  
+  /* Стили для левого блока – слайдера числовых данных */
+  .swiper-about-left {
+    overflow: hidden;
+  }
+  
+  .swiper-wrapper {
+    display: flex;
+    transition: transform 0.3s ease;
+  }
+  
+  .swiper-slide {
+    min-width: 120px;
+    padding: 20px;
+    background: #fff;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-num__title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .about-num__desc {
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  
+  /* Стили для правой части секции */
+  .about__desc-wrapper {
+    margin-bottom: 30px;
+  }
+  
+  .about__desc-wrapper .text-16 {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  .about-advants {
+    margin-top: 30px;
+  }
+  
+  .about-advants__title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #004677;
+  }
+  
+  .about-advants__box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .about-advants__item {
+    flex: 1 1 30%;
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-advants__num {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #147BD1;
+  }
+  
+  .about-advants__desc {
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  /* Адаптивность (пример) */
+  @media (max-width: 768px) {
+    .about__box {
+      flex-direction: column;
+    }
+    
+    .about__left,
+    .about__right {
+      flex: 1 1 100%;
+    }
+    
+    .home__box {
+      padding: 60px 0;
+    }
+  }
+  
