@@ -1,236 +1,346 @@
+/* Глобальные правила */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Предотвращаем горизонтальный скролл */
+}
+
 /* Общие стили для контейнера */
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Стили для test_container */
+.test_container {
+  background-image: url('../images/home-bg.webp');
+  background-size: cover;
+  background-position: center;
+  width: 100vw;           /* 100% ширины вьюпорта */
+  height: 110vh;          /* Высота 120% от вьюпорта */
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  margin: 0;              /* сброс внешних отступов */
+  padding: 0;             /* сброс внутренних отступов */
+  position: relative;     /* или absolute, если нужно позиционирование относительно вьюпорта */
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+/* Остальные стили остаются без изменений */
+.section.home {
+  position: relative;
+  overflow: hidden;
+}
+
+.home__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.home__bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home__box {
+  position: relative;
+  z-index: 1;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.home__title p {
+  font-size: 2.5rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.text-38 {
+  text-align: center;
+  font-size: 66px;
+  margin-top: 20px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.text-16 {
+  font-size: 16px;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+.join {
+  width: 20%;
+  height: 10vh;
+  margin-top: 30px;
+  background-color: #fff;
+  color: #147BD1;
+  border: none;
+  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* Центрирование содержимого по горизонтали */
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
+
+.join:hover {
+  background-color: #147BD1;
+  color: #fff;
+  font-size: 18px;
+}
+
+.btn-with-arrow__icon {
+  margin-left: 10px;
+  display: flex;
   
-  /* ===========================
-     Секция Home (главный блок)
-     =========================== */
-  .section.home {
-    position: relative;
-    overflow: hidden;
-  }
+}
+
+.home__social {
+  color:#fff;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.home__social-link svg {
+  color: #fff;
+  width: 34px;
+  height: 34px;
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.home__social-link:hover svg {
+  transform: scale(1.1);
+  color: #147BD1;
+}
+
+/* Custom About */
+
+.About_full_container_horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Задает отступ между элементами */
+}
+
+.About_vertical_container {
+  width: 100%;       /* 20% ширины экрана */
+  height: 80vh;     /* высота оставляем без изменений */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;        /* убираем автоматические отступы, чтобы элемент не центрировался */
+  overflow: hidden;
+}
+
+
+.About_vertical_container_additional {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Задает отступ между элементами */
+}
+
+/* Родительские столбцы, чтобы элементы шли вертикально с равномерным отступом */
+.About_vertical_container_additional_column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* интервал между элементами */
+}
+
+
+.about-advants__item {
+  width: 100%;          /* элемент заполняет всю ширину родительского столбца */
+  height: 150px;        /* фиксированная высота — можно подстроить под дизайн */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
   
-  .home__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-  }
+  /* Выравнивание текста слева */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   
-  .home__bg-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  
-  .home__box {
-    position: relative;
-    z-index: 1;
-    padding: 100px 0;
-    text-align: center;
-    color: #fff;
-  }
-  
-  .home__title p {
-    font-size: 2.5rem;
-    margin: 0;
-    line-height: 1.2;
-  }
-  
-  .text-16 {
-    font-size: 16px;
-    margin-top: 20px;
-  }
-  
-  .btn-with-arrow {
-    margin-top: 30px;
-    background-color: #fff;
-    color: #147BD1;
-    border: none;
-    padding: 10px 20px;
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-with-arrow:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .btn-with-arrow__icon {
-    margin-left: 10px;
-    display: flex;
-  }
-  
-  .home__social {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-  }
-  
-  .home__social-link svg {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease;
-  }
-  
-  .home__social-link:hover svg {
-    transform: scale(1.1);
-  }
-  
-  /* ===========================
-     Секция About (о сообществе)
-     =========================== */
-  .section.about {
-    padding: 80px 0;
-    background-color: #f7f7f7;
-    position: relative;
-  }
-  
-  /* Пример декоративных фонов (верхний и нижний куб) */
-  .bg-cube-top::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: url('../images/cube.png') no-repeat top center;
-    background-size: cover;
-    z-index: -1;
-  }
-  
-  .bg-cube-bottom::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: url('../images/cube.png') no-repeat bottom center;
-    background-size: cover;
-    z-index: -1;
-  }
-  
-  .about__title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 40px;
-    text-align: left;
-  }
-  
+  /* Плавный переход для эффекта hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Эффект при наведении: подсветка и небольшое уменьшение */
+.about-advants__item:hover {
+  transform: scale(0.97);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* ===========================
+   Секция About (о сообществе)
+   =========================== */
+.section.about {
+  padding: 80px 0;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+/* Декоративные фоны (верхний и нижний куб) */
+.bg-cube-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url('../images/cube.png') no-repeat top center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.bg-cube-bottom::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url('../images/cube.png') no-repeat bottom center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.about__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.about__box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.about__left,
+.about__right {
+  flex: 1 1 50%;
+}
+
+/* Стили для левого блока – слайдера числовых данных */
+.swiper-about-left {
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide {
+  min-width: 120px;
+  padding: 20px;
+  background: #fff;
+  margin-right: 10px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-num__title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.about-num__desc {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Стили для правой части секции */
+.about__desc-wrapper {
+  margin-bottom: 30px;
+}
+
+.about__desc-wrapper .text-16 {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.about-advants {
+  margin-top: 30px;
+}
+
+.about-advants__title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #004677;
+}
+
+.about-advants__box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about-advants__item {
+  flex: 1 1 30%;
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-advants__num {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #147BD1;
+}
+
+.about-advants__desc {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Адаптивность (пример) */
+@media (max-width: 768px) {
   .about__box {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+    flex-direction: column;
   }
   
   .about__left,
   .about__right {
-    flex: 1 1 50%;
+    flex: 1 1 100%;
   }
   
-  /* Стили для левого блока – слайдера числовых данных */
-  .swiper-about-left {
-    overflow: hidden;
+  .home__box {
+    padding: 60px 0;
   }
-  
-  .swiper-wrapper {
-    display: flex;
-    transition: transform 0.3s ease;
-  }
-  
-  .swiper-slide {
-    min-width: 120px;
-    padding: 20px;
-    background: #fff;
-    margin-right: 10px;
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .about-num__title {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  
-  .about-num__desc {
-    font-size: 0.9rem;
-    margin-top: 5px;
-  }
-  
-  /* Стили для правой части секции */
-  .about__desc-wrapper {
-    margin-bottom: 30px;
-  }
-  
-  .about__desc-wrapper .text-16 {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-  }
-  
-  .about-advants {
-    margin-top: 30px;
-  }
-  
-  .about-advants__title {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #004677;
-  }
-  
-  .about-advants__box {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .about-advants__item {
-    flex: 1 1 30%;
-    background: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .about-advants__num {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #147BD1;
-  }
-  
-  .about-advants__desc {
-    font-size: 0.9rem;
-    color: #333;
-  }
-  
-  /* Адаптивность (пример) */
-  @media (max-width: 768px) {
-    .about__box {
-      flex-direction: column;
-    }
-    
-    .about__left,
-    .about__right {
-      flex: 1 1 100%;
-    }
-    
-    .home__box {
-      padding: 60px 0;
-    }
-  }
-  
+}

@@ -1,0 +1,138 @@
+/* Глобальные правила */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Предотвращаем горизонтальный скролл */
+  }
+  
+  /* Общие стили для контейнера */
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* Стили для test_container */
+  .test_container {
+    background-image: url('../images/home-bg.webp');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;           /* 100% ширины вьюпорта */
+    height: 110vh;          /* Высота 120% от вьюпорта */
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    margin: 0;              /* сброс внешних отступов */
+    padding: 0;             /* сброс внутренних отступов */
+    position: relative;     /* или absolute, если нужно позиционирование относительно вьюпорта */
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  
+  /* Остальные стили остаются без изменений */
+  .section.home {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .home__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .home__bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .home__box {
+    position: relative;
+    z-index: 1;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .home__title p {
+    font-size: 2.5rem;
+    margin: 0;
+    line-height: 1.2;
+  }
+  
+  .text-38 {
+    text-align: center;
+    font-size: 66px;
+    margin-top: 20px;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  
+  .text-16 {
+    font-size: 16px;
+    margin-top: 20px;
+    color: #ffffff;
+  }
+  
+  .join {
+    width: 20%;
+    height: 10vh;
+    margin-top: 30px;
+    background-color: #fff;
+    color: #147BD1;
+    border: none;
+    padding: 10px 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* Центрирование содержимого по горизонтали */
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+  }
+  
+  .join:hover {
+    background-color: #147BD1;
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  .btn-with-arrow__icon {
+    margin-left: 10px;
+    display: flex;
+    
+  }
+  
+  .home__social {
+    color:#fff;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .home__social-link svg {
+    color: #fff;
+    width: 34px;
+    height: 34px;
+    transition: transform 0.3s ease, fill 0.3s ease;
+  }
+  
+  .home__social-link:hover svg {
+    transform: scale(1.1);
+    color: #147BD1;
+  }
+  
+  

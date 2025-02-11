@@ -1,0 +1,75 @@
+.about-page {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .header {
+    background-color: #004677;
+    padding: 20px 0;
+    color: white;
+  }
+  
+  .header__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .header__menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .header__menu a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .main {
+    padding: 40px 0;
+  }
+  
+  .about-home__title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .ah-card {
+    background: #f8f8f8;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  
+  .ah-card__title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .ah-card__desc {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  
+  .footer {
+    background-color: #004677;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  .footer__nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer__nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Дополнительные стили для адаптации остальных блоков */
+  

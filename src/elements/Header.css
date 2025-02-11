@@ -4,19 +4,25 @@
   }
   
   .header__container {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
   }
   
-  .header__inner {
+  .header_full {
     display: flex;
+    flex-direction: row; /* элементы располагаются горизонтально */
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    height: 8%;
   }
   
   .logo {
     display: flex;
+    left: 0;
+    width: 120px;
+    height: 60px;
     align-items: center;
     text-decoration: none;
   }
@@ -32,13 +38,31 @@
     margin: 0 15px;
   }
   
-  .header__menu li a {
+  .menu-item {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
   }
   
-  .header__lang {
-    /* Стили для блока переключателя языков */
+  .ChangeLanguage,
+  .ContactUs {
+    background: transparent; /* прозрачный фон */
+    border: none;            /* без границ */
+    color: #fff;             /* белый текст */
+    padding: 0;              /* убираем внутренние отступы */
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .ChangeLanguage:hover,
+  .ContactUs:hover {
+    color: #ccc;             /* изменяем цвет текста при наведении */
+  }
+  
+  .ChangeLanguage:focus,
+  .ContactUs:focus {
+    outline: none;           /* убираем стандартное обведение при фокусе */
   }
   
