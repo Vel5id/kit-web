@@ -1,0 +1,30 @@
+@keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .logo-hover {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  /* Задержка анимации для каждого логотипа */
+  .logo-hover:nth-child(1) {
+    animation-delay: 1s;
+  }
+  .logo-hover:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .logo-hover:nth-child(3) {
+    animation-delay: 1.6s;
+  }
+  .logo-hover:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  

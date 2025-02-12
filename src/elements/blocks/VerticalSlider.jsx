@@ -19,7 +19,7 @@ const VerticalSlider = () => {
   ];
 
   return (
-    <div className="About_vertical_container">
+    <div className="About_vertical_container" >
       <Swiper
         direction="vertical"
         slidesPerView={5}
@@ -27,16 +27,17 @@ const VerticalSlider = () => {
         mousewheel={true}
         loop={true}
         autoplay={{
-          delay: 3000, // 5000 миллисекунд = 5 секунд
+          delay: 2000, // 5000 миллисекунд = 5 секунд
           disableOnInteraction: false,
         }}
         modules={[Mousewheel, Autoplay]}
+        style={{width:"50vh", height:"102vh"}}
       >
         {slides.map((slide, index) => (
-          <SwiperSlide key={index}>
-            <div className="about-num">
-              <div className="about-num__title">{slide.title}</div>
-              <div className="about-num__desc">{slide.desc}</div>
+          <SwiperSlide key={index} style={{ backgroundColor: "rgb(240, 240, 240)", borderRadius:"15px" }}>
+            <div className="about-num" style={{display:"flex", flexDirection:"column", height:"100%", justifyContent:"center" }} >
+              <div className="about-num__title" style={{ color:"#147BD1", fontWeight: 400}}>{slide.title}</div>
+              <div className="about-num__desc" style={{ color: "rgb(41, 41, 41)", fontWeight: 600}}>{slide.desc}</div>
             </div>
           </SwiperSlide>
         ))}

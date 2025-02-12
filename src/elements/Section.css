@@ -177,7 +177,7 @@ html, body {
   width: 100%;          /* элемент заполняет всю ширину родительского столбца */
   height: 150px;        /* фиксированная высота — можно подстроить под дизайн */
   background-color: #fff;
-  padding: 20px;
+  padding-left: 20px;
   border-radius: 5px;
   
   /* Выравнивание текста слева */

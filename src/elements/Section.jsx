@@ -1,6 +1,6 @@
 import React from 'react';
 import './Section.css'; // Импортируйте свои стили, если необходимо
-import VerticalSlider from './VerticalSlider';
+import VerticalSlider from './blocks/VerticalSlider';
 
 const Section = () => {
     return (
