@@ -1,0 +1,25 @@
+
+.button {
+  background-color: #fff;
+  color: #333;
+  border: solid;
+  border-width: 1px;
+  border-color: #147BD1;
+  width: 27%;
+  height: 75%;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  display: flex;
+  justify-content: center; /* горизонтальное центрирование */
+  align-items: center;     /* вертикальное центрирование */
+
+}
+
+.button:hover {
+  background-color: #147BD1; /* другое значение для background-color */
+  color: #fff;
+}

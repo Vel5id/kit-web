@@ -19,7 +19,7 @@ const VerticalSlider = () => {
   ];
 
   return (
-    <div className="About_vertical_container" >
+    <div className="About_vertical_container" style={{borderRadius:"15px"}}>
       <Swiper
         direction="vertical"
         slidesPerView={5}
