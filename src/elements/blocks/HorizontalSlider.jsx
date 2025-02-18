@@ -50,13 +50,13 @@ const HorizontalSlider = ({
             >
               <div
                 className="about-num__title"
-                style={{ color: "#147BD1", fontWeight: 400 }}
+                style={{ color: "rgb(24, 96, 155)", fontWeight: 600, fontSize:"4.5vh" }}
               >
                 {slide.title}
               </div>
               <div
                 className="about-num__desc"
-                style={{ color: "rgb(41, 41, 41)", fontWeight: 600 }}
+                style={{ color: "rgb(41, 41, 41)", fontWeight: 600, fontSize:"2.5vh" }}
               >
                 {slide.desc}
               </div>

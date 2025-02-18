@@ -32,16 +32,16 @@ const Product_section = () => {
  <div className="DivMain" style={{display: "flex", flexDirection: "column", color: "darkblue", width: "98%", height: "38vh", marginTop: "5%", backgroundColor:"rgb(240, 240, 240)", alignItems:"center", justifyContent:"center", marginLeft:"1%", marginBottom:"5%"}}>
         <div>
           <div style={{display:"flex", width:"200vh", height:"12vh", flexDirection:"row", padding:"1.5vh", }}>
-            <div style={{display:"flex", width:"100vh", height:"100%", flexDirection:"row", justifyContent:"flex-start", alignItems:"center"}}>9 Продуктов</div>
+            <div style={{display:"flex", width:"100vh", height:"100%", flexDirection:"row", justifyContent:"flex-start", alignItems:"center", fontSize:"8vh", fontWeight:"600"}}>9 Продуктов</div>
             <div style={{display:"flex", width:"100vh", height:"100%", flexDirection:"row", justifyContent:"flex-end", alignItems:"center", gap:"15px"}}>
-              <div>Направления:  </div>
-              <button className="button" onClick={() => handleButtonClick(0)}>
+              <div style={{fontSize:"2.5vh"}} >Направления:  </div>
+              <button className="button" style={{fontSize:"2.5vh"}} onClick={() => handleButtonClick(0)}>
                 K (Knowledge)
               </button>
-              <button className="button" onClick={() => handleButtonClick(1)}>
+              <button className="button" style={{fontSize:"2.5vh"}} onClick={() => handleButtonClick(1)}>
                 I (Interaction)
               </button>
-              <button className="button" onClick={() => handleButtonClick(2)}>
+              <button className="button" style={{fontSize:"2.5vh"}} onClick={() => handleButtonClick(2)}>
                 T (Trends)
               </button>
             </div>

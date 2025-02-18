@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Обновлённый SVG с градиентной заливкой, белой обводкой и белым внутренним кругом -->
+<svg width="800px" height="800px" viewBox="-3 0 24 24" id="meteor-icon-kit__solid-map-marker" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradMarker" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="hsl(219,73.30%,52.90%)" />
+      <stop offset="100%" stop-color="hsl(219,64.10%,28.40%)" />
+    </linearGradient>
+  </defs>
+  <!-- Внешняя форма маркера с градиентной заливкой и белой обводкой -->
+  <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M9.7685 23.0866C9.7296 23.1333 9.6866 23.1763 9.6399 23.2152C9.2154 23.5686 8.5849 23.511 8.2315 23.0866C2.74384 16.4959 0 11.6798 0 8.63811C0 3.86741 4.2293 0 9 0C13.7707 0 18 3.86741 18 8.63811C18 11.6798 15.2562 16.4959 9.7685 23.0866z"
+        fill="url(#gradMarker)" stroke="white" stroke-width="1" />
+  <!-- Внутренний круг с белой заливкой и обводкой -->
+  <circle cx="9" cy="9" r="3" fill="#fff" stroke="white" stroke-width="0.5"/>
+</svg>

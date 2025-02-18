@@ -1,0 +1,20 @@
+.about-num2 {
+    background-color: white;
+}
+
+.about-num__desc2 {
+  font-size: 2.5vh;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2; /* Ограничение до 2 строк */
+  white-space: normal;
+  font-weight: 600;
+}
+.about-num__title2 {
+    font-size:5vh;
+    font-weight: 600;
+
+
+}
+  

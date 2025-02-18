@@ -1,0 +1,85 @@
+/* Контейнер всего слайдера */
+.benefits-slider-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Заголовок слайдера */
+  .benefits-slider-heading {
+    display: flex;
+    width: 90%;
+    font-size: 60px;
+    font-weight: 700;
+    padding-left: 3%;
+    margin-bottom: 20px;
+  }
+  
+  /* Обёртка для слайдера */
+  .benefits-slider-wrapper {
+    display: flex;
+    width: 90%;
+    padding-left: 3%;
+  }
+  
+  /* Сам Swiper с фиксированной высотой */
+  .benefits-slider {
+    width: 100%;
+    height: 400px; /* Фиксированная высота для внешнего контейнера */
+    padding: 20px 0;
+  }
+  
+  /* Каждый слайд занимает всю высоту контейнера */
+  .benefit-slide {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Карточка внутри слайда */
+  .benefit-card {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-between;
+  }
+  
+  /* Заголовок карточки: строка с заголовком и номером */
+  .benefit-card__heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px; /* Фиксированная высота для шапки карточки */
+    margin-bottom: 10px;
+  }
+  
+  /* Заголовок */
+  .benefit-card__title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Номер */
+  .benefit-card__num {
+    font-size: 16px;
+    color: #888;
+  }
+  
+  /* Описание карточки */
+  .benefit-card__desc {
+    font-size: 14px;
+    line-height: 1.4;
+    height: 200px; /* Фиксированная высота для блока описания */
+    overflow: hidden;
+  }
+  
