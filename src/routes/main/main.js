@@ -8,6 +8,7 @@ import Club_section from '../../elements/Club_section.jsx';
 import SubmitSection from '../../elements/SubmitSection.jsx';
 import BenefitsSlider from '../../elements/BenefitSlider.jsx';
 import MyMap from '../../elements/Map.jsx';
+import PhotoSlider from '../../elements/blocks/PhotoSlider.jsx';
 
 function Main() {
   return (
@@ -20,6 +21,7 @@ function Main() {
       <SubmitSection/>
       <BenefitsSlider/>
       <MyMap/>
+      <PhotoSlider/>
       <EventsSlider />
     </div>
   );
