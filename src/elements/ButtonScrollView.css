@@ -1,0 +1,9 @@
+.hide-scrollbar-event {
+    scrollbar-width: none;    /* Для Firefox */
+    -ms-overflow-style: none; /* Для Internet Explorer 10+ */
+  }
+  
+  .hide-scrollbar-event::-webkit-scrollbar {
+    display: none; /* Для Chrome, Safari и Opera */
+  }
+  

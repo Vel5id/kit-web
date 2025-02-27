@@ -69,7 +69,7 @@ const benefitsData = [
 const BenefitsSlider = () => {
   return (
     <div className="benefits-slider-container">
-      <div className="benefits-slider-heading">
+      <div className="benefits-slider-heading" style={{color: "rgb(24, 96, 155)"}}>
         ВМЕСТЕ С KIT ВЫ ПРИОБРЕТАЕТЕ
       </div>
       <div className="benefits-slider-wrapper">
@@ -87,7 +87,7 @@ const BenefitsSlider = () => {
             <SwiperSlide key={index} className="benefit-slide">
               <div className="benefit-card">
                 <div className="benefit-card__heading">
-                  <div className="benefit-card__title">{item.title}</div>
+                  <div className="benefit-card__title" style={{color:"rgb(24, 96, 155)"}}>{item.title}</div>
                   <div className="benefit-card__num">{item.num}</div>
                 </div>
                 <div className="benefit-card__desc">{item.desc}</div>

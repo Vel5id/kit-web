@@ -1,28 +1,54 @@
 import DOMPurify from 'dompurify';
 import EventsSlider from '../../elements/EventsSlider.jsx';
 import MainSection from '../../elements/MainSection.jsx';
-import About_section from '../../elements/About_section.jsx';
+import AboutSection from '../../elements/AboutSection.jsx';
 import Separator from '../../elements/Separator.jsx';
-import Product_section from '../../elements/Product_section.jsx';
-import Club_section from '../../elements/Club_section.jsx';
+import ProductSection from '../../elements/ProductSection.jsx';
+import ClubSection from '../../elements/ClubSection.jsx';
 import SubmitSection from '../../elements/SubmitSection.jsx';
 import BenefitsSlider from '../../elements/BenefitSlider.jsx';
 import MyMap from '../../elements/Map.jsx';
 import PhotoSlider from '../../elements/blocks/PhotoSlider.jsx';
+import FadeSection from './FadeInSection';
+import EventSection from '../../elements/EventSection.jsx';
+import FormOfEvents from '../../elements/FormOfEvents.jsx';
 
 function Main() {
   return (
-    <div>
-      <MainSection />
-      <About_section/>
-      <Separator/>
-      <Product_section/>
-      <Club_section/>
-      <SubmitSection/>
-      <BenefitsSlider/>
-      <MyMap/>
-      <PhotoSlider/>
-      <EventsSlider />
+    <div style={{overflowY: "hidden"}}>
+      <FadeSection>
+        <MainSection />
+      </FadeSection>
+      <FadeSection>
+        <AboutSection />
+      </FadeSection>
+      <FadeSection>
+        <Separator />
+      </FadeSection>
+      <FadeSection>
+        <ProductSection />
+      </FadeSection>
+      <FadeSection>
+        <ClubSection />
+      </FadeSection>
+      <FadeSection>
+        <SubmitSection />
+      </FadeSection>
+      <FadeSection>
+        <BenefitsSlider />
+      </FadeSection>
+      <FadeSection>
+        <MyMap />
+      </FadeSection>
+      <FadeSection>
+        <EventSection/>
+      </FadeSection>
+      <FadeSection>
+        <FormOfEvents/>
+      </FadeSection>
+      <FadeSection>
+        <SubmitSection />
+      </FadeSection>
     </div>
   );
 }

@@ -1,0 +1,9 @@
+.fade-section {
+  opacity: 0;
+  transition: opacity 0.8s ease-out; /* настройте длительность и тип анимации по желанию */
+  background-color: white; /* если нужно, чтобы фон был белым */
+}
+
+.fade-section.fade-in {
+  opacity: 1;
+}

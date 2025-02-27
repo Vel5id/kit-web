@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './AboutAdvantsItem.css'
 
 // Компонент, принимающий пропсы: num и desc
 export function AboutAdvantsItem({ num, desc }) {
@@ -15,11 +16,6 @@ export function AboutAdvantsItem({ num, desc }) {
     justifyContent: "flex-start", // выравнивание элементов слева
     alignItems: "center",
     marginBottom: "0px",
-    transition: "transform 0.3s ease, box-shadow 0.3s ease",
-    ...(isHovered && {
-      transform: "scale(0.97)",
-      boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)"
-    })
   };
 
   return (
@@ -32,7 +28,7 @@ export function AboutAdvantsItem({ num, desc }) {
       {/* Блок с цифрой – всегда слева */}
       <div
         className="about-advants__num"
-        style={{ marginLeft: "10px", textAlign: "left", fontWeight: 700, fontSize:"26px", color:"rgb(32, 66, 189)" }}
+        style={{ marginLeft: "10px", textAlign: "left", fontWeight: 700, fontSize:"26px", color:"rgb(24, 96, 155)" }}
       >
         {num}
       </div>

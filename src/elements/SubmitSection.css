@@ -89,13 +89,13 @@
     display: flex;
     width: 25%;
     height: 12%;
-    justify-content: center;
+    justify-content: center;  
     align-items: center;
     border-radius: 2.25vh; /* 15px -> 2.25vh */
     font-size: 3vh; /* 20px -> 3vh */
     border: none;
     margin-top: 1%;
-    background-color: #0066cc;
+    background-color: #005bb5;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -103,6 +103,6 @@
   
   /* Hover-эффект для кнопки */
   .registration-submit-btn:hover {
-    background-color: #005bb5;
+    background-color: #0067ce;
   }
   

@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import './HorizontalSlider.css'
 
 const HorizontalSlider = ({
   swiperRef,
@@ -10,7 +11,7 @@ const HorizontalSlider = ({
   slidesPerView = 3,
   spaceBetween = 30,
   sliderWidth = "100%",
-  sliderHeight = "20vh",
+  sliderHeight = "18vh",
   autoplayDelay = 2000
 }) => {
   return (
@@ -36,7 +37,7 @@ const HorizontalSlider = ({
             key={index}
             style={{
               backgroundColor: "#fff",
-              borderRadius: "15px"
+              borderRadius: "15px",
             }}
           >
             <div
@@ -44,7 +45,7 @@ const HorizontalSlider = ({
               style={{
                 display: "flex",
                 flexDirection: "column",
-                height: "100%",
+                height: "90%",
                 justifyContent: "center"
               }}
             >

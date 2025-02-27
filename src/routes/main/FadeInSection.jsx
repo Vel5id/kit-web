@@ -1,27 +1,36 @@
-import React, { useRef, useState, useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import './fadeSection.css'; // файл стилей
 
 const FadeSection = ({ children }) => {
   const domRef = useRef();
-  const [isVisible, setVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          // Обновляем состояние в зависимости от того, пересекается ли элемент с областью видимости
-          setVisible(entry.isIntersecting);
+        entries.forEach(entry => {
+          // Если элемент попадает в область видимости, добавляем класс для плавного появления,
+          // иначе удаляем его для эффекта растворения.
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+          } else {
+            entry.target.classList.remove('fade-in');
+          }
         });
       },
-      { threshold: 0.2 } // Порог можно настроить под себя
+      {
+        threshold: 0.1, // настройка порога, когда элемент считается видимым
+      }
     );
+
     if (domRef.current) {
       observer.observe(domRef.current);
     }
+
     return () => observer.disconnect();
   }, []);
 
   return (
-    <div ref={domRef} className={`fade ${isVisible ? 'visible' : ''}`}>
+    <div className="fade-section" ref={domRef}>
       {children}
     </div>
   );

@@ -3,10 +3,10 @@ import './Section.css'; // Импортируйте свои стили, есл�
 import VerticalSlider from './blocks/VerticalSlider';
 import { AboutAdvantsItem } from './blocks/AboutAdvantsItem';
 
-const About_section = () => {
+const AboutSection = () => {
     return (
       <>
-        <div className="DivMain" style={{display: "flex", flexDirection: "column",color: "darkblue",width: "100%",height: "102vh", marginTop: "3vh"}}>
+        <div className="DivMain" style={{display: "flex", flexDirection: "column",color: "darkblue",width: "100%",height: "102vh", marginTop: "3vh", marginBottom:"20vh"}}>
             <div className="DivMain" style={{display: "flex", flexDirection: "column",color: "darkblue",width: "100%",height: "20vh"}}>
             <div className="text-info-high" style={{fontSize:"4.5vh", fontWeight: 600, fontSize:"12vh", paddingBottom:"3vh", marginLeft:"3vh" ,color:"rgb(24, 96, 155)"}}>О СООБЩЕСТВЕ</div>
             </div>
@@ -57,4 +57,4 @@ const About_section = () => {
     );
   };
   
-export default About_section;
+export default AboutSection;

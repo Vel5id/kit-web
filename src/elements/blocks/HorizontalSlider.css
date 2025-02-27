@@ -1,0 +1,9 @@
+.About_horizontal_container .swiper-slide {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .About_horizontal_container .swiper-slide:hover {
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.7); /* голубой ореол */
+    transform: scale(0.95); /* уменьшение элемента */
+  }
+  

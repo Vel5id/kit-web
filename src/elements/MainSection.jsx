@@ -4,7 +4,7 @@ import './MainSection.css'; // Импортируйте свои стили, е�
 const MainSection = () => {
     return (
     <section className="section home">
-          <div className="container">
+          <div className="container" style={{marginBottom:"20vh"}}>
             <div className="test_container">
               <div className="text-38" data-aos="fade-up" data-aos-delay="500">
                 <p>

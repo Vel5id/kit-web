@@ -1,0 +1,9 @@
+.about-advants__item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .about-advants__item:hover {
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.7);
+    transform: scale(0.95);
+  }
+  

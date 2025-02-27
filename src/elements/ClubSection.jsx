@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import HorizontalSlider2 from './blocks/HorizontalSlider2';
-import './Club_section.css';
+import './ClubSection.css';
 
 const slidesData = [
     {
@@ -78,7 +78,7 @@ const slidesData = [
   ];
 
 
-const Club_section = () => {
+const ClubSection = () => {
   const swiperRef = useRef(null);
 
   // Функция для анимированной прокрутки до нужной группы слайдов.
@@ -93,10 +93,10 @@ const Club_section = () => {
 
   return (
     <div>
- <div className="DivMain" style={{display: "flex", flexDirection: "column", color: "darkblue", width: "98%", height: "62vh", marginTop: "5%", backgroundColor:"", alignItems:"center", justifyContent:"center", marginLeft:"1%", marginBottom:"5%"}}>
+ <div className="DivMain" style={{display: "flex", flexDirection: "column", color: "darkblue", width: "98%", height: "62vh", marginTop: "5%", backgroundColor:"rgb(240, 240, 240)", alignItems:"center", justifyContent:"center", marginLeft:"1%",marginTop:"20vh", marginBottom:"20vh", borderRadius:"4vh"}}>
         <div>
           <div style={{display:"flex", width:"200vh", height:"12vh", flexDirection:"row", padding:"1.5vh", }}>
-            <div style={{display:"flex", width:"100vh", height:"100%", flexDirection:"row", justifyContent:"flex-start", alignItems:"center", fontSize:"8vh", fontWeight:"600"}}>18 Клубов</div>
+            <div style={{display:"flex", width:"100vh", height:"100%", flexDirection:"row", justifyContent:"flex-start", alignItems:"center", fontSize:"8vh", fontWeight:"600", color:"rgb(24, 96, 155)"}}>18 Клубов</div>
             <div style={{display:"flex", width:"100vh", height:"100%", flexDirection:"row", justifyContent:"flex-end", alignItems:"center", gap:"15px"}}>
               <div style={{fontSize:"2.5vh"}} >Направления:  </div>
               <button className="button" style={{fontSize:"2.5vh"}} onClick={() => handleButtonClick(0)}>
@@ -111,7 +111,7 @@ const Club_section = () => {
             </div>
           </div>
         </div>
-        <div style={{display:"flex", width:"100%", height: "45vh", justifyContent:"center", alignItems:"center", }}>
+        <div style={{display:"flex", width:"100%", height: "47vh", justifyContent:"center", alignItems:"center", }}>
           <HorizontalSlider2
             swiperRef={swiperRef}  // Передаём ref в слайдер
             slides={slidesData}      // Передаём все слайды
@@ -127,4 +127,4 @@ const Club_section = () => {
   );
 };
 
-export default Club_section;
+export default ClubSection;

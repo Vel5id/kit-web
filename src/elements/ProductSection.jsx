@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import HorizontalSlider from './blocks/HorizontalSlider';
-import './Product_section.css';
+import './ProductSection.css';
 
 const slidesData = [
   { title: 'Manhattan Business Academy', desc: 'Эверест, Хан-Тенгри, Level-up' },
@@ -14,7 +14,7 @@ const slidesData = [
   { title: 'KIT Goverment', desc: 'Налаживание связей с Гос. Органами' },
 ];
 
-const Product_section = () => {
+const ProductSection = () => {
   const swiperRef = useRef(null);
 
   // Функция для анимированной прокрутки до нужной группы слайдов.
@@ -29,10 +29,10 @@ const Product_section = () => {
 
   return (
     <div>
- <div className="DivMain" style={{display: "flex", flexDirection: "column", color: "darkblue", width: "98%", height: "38vh", marginTop: "5%", backgroundColor:"rgb(240, 240, 240)", alignItems:"center", justifyContent:"center", marginLeft:"1%", marginBottom:"5%"}}>
+ <div className="DivMain" style={{display: "flex", flexDirection: "column", color: "darkblue", width: "98%", height: "38vh", marginTop: "5%", backgroundColor:"rgb(240, 240, 240)", alignItems:"center", justifyContent:"center", marginLeft:"1%",marginTop:"20vh", marginBottom:"20vh", borderRadius:"4vh"}}>
         <div>
           <div style={{display:"flex", width:"200vh", height:"12vh", flexDirection:"row", padding:"1.5vh", }}>
-            <div style={{display:"flex", width:"100vh", height:"100%", flexDirection:"row", justifyContent:"flex-start", alignItems:"center", fontSize:"8vh", fontWeight:"600"}}>9 Продуктов</div>
+            <div style={{display:"flex", width:"100vh", height:"100%", flexDirection:"row", justifyContent:"flex-start", alignItems:"center", fontSize:"8vh", fontWeight:"600", color:"rgb(24, 96, 155)"}}>9 Продуктов</div>
             <div style={{display:"flex", width:"100vh", height:"100%", flexDirection:"row", justifyContent:"flex-end", alignItems:"center", gap:"15px"}}>
               <div style={{fontSize:"2.5vh"}} >Направления:  </div>
               <button className="button" style={{fontSize:"2.5vh"}} onClick={() => handleButtonClick(0)}>
@@ -63,4 +63,4 @@ const Product_section = () => {
   );
 };
 
-export default Product_section;
+export default ProductSection;

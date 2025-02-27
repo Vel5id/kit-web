@@ -21,7 +21,7 @@ const HorizontalSlider2 = ({
   }
 
   return (
-    <div className="About_horizontal_container" style={{ borderRadius: "15px" }}>
+    <div className="About_horizontal_container2" style={{ borderRadius: "15px" }}>
       <Swiper
         onSwiper={(swiper) => {
           if (swiperRef) {

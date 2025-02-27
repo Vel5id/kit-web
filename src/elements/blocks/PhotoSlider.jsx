@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./TextAnimation.css"; // импортируем наши стили
 
 // Пример импортированных изображений
 import slide1 from "../../images/1.jpg";
@@ -11,21 +12,25 @@ import slide4 from "../../images/4.jpg";
 import slide5 from "../../images/5.webp";
 
 const PhotoSlider = () => {
-  // Состояние для отслеживания индекса левого (активного) слайда
+  // Состояние для текущего активного слайда
   const [activeIndex, setActiveIndex] = useState(0);
+  // Состояние для предыдущего слайда (для анимации ухода текста)
+  const [previousIndex, setPreviousIndex] = useState(null);
 
   // Слайды
   const slidesData = [
     {
       id: 1,
       name: "Руслан Берденов",
-      role: "Первый руководитель сети фармсторов Europharma Член наблюдательного совета в Aq Niet Group",
+      role:
+        "Первый руководитель сети фармсторов Europharma Член наблюдательного совета в Aq Niet Group",
       image: slide1
     },
     {
       id: 2,
       name: "Мурат Утемисов",
-      role: "Руководитель девелоперского направления в международной компании Kusto Group Член Совета Директоров Kusto Group",
+      role:
+        "Руководитель девелоперского направления в международной компании Kusto Group Член Совета Директоров Kusto Group",
       image: slide2
     },
     {
@@ -65,10 +70,11 @@ const PhotoSlider = () => {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 3,        // показываем 3 слайда за раз (пример)
+    slidesToShow: 3, // показываем 3 слайда за раз (пример)
     slidesToScroll: 1,
     beforeChange: (current, next) => {
-      // при переключении сохраняем индекс "левой" карточки
+      // При смене слайда сохраняем предыдущий индекс и обновляем активный
+      setPreviousIndex(activeIndex);
       setActiveIndex(next);
     },
     responsive: [
@@ -93,39 +99,57 @@ const PhotoSlider = () => {
     ]
   };
 
+  // После завершения анимации очищаем previousIndex,
+  // чтобы оставался только текущий текст
+  useEffect(() => {
+    if (previousIndex !== null) {
+      const timer = setTimeout(() => {
+        setPreviousIndex(null);
+      }, 600); // длительность анимации 0.6s
+      return () => clearTimeout(timer);
+    }
+  }, [previousIndex]);
+
   return (
-    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "40px 20px" }}>
-      {/* 
-        Опционально можете вынести блок с описанием активного слайда наверх/вниз 
-        и анимировать, как в предыдущих примерах.
-      */}
-      <div style={{ marginBottom: "20px", textAlign: "left" }}>
-        <h2 style={{ margin: "0 0 8px" }}>{slidesData[activeIndex].name}</h2>
-        <p style={{ margin: 0, color: "#555" }}>{slidesData[activeIndex].role}</p>
+    <div style={{ maxWidth: "200vh", margin: "0 auto", padding: "5vh 2.5vh" }}>
+      {/* Контейнер для текста с анимацией */}
+      <div className="slide-text-container">
+        {previousIndex !== null && (
+          <div className="slide-text-out">
+            <h2 style={{ margin: "0 0 1vh", color:"rgb(24, 96, 155)" }}>
+              {slidesData[previousIndex].name}
+            </h2>
+            <p style={{ margin: 0, color: "#555" }}>
+              {slidesData[previousIndex].role}
+            </p>
+          </div>
+        )}
+        <div className={previousIndex !== null ? "slide-text-in" : ""}>
+          <h2 style={{ margin: "0 0 1vh", color:"rgb(24, 96, 155)" }}>{slidesData[activeIndex].name}</h2>
+          <p style={{ margin: 0, color: "#555" }}>
+            {slidesData[activeIndex].role}
+          </p>
+        </div>
       </div>
 
       <Slider {...settings}>
         {slidesData.map((slide, index) => {
-          // Определяем, является ли данный слайд "активным" (то есть левым)
+          // Определяем, является ли данный слайд активным (левым)
           const isActive = index === activeIndex;
 
           return (
             <div key={slide.id}>
               <div
                 style={{
-                  // Небольшие отступы между карточками
-                  margin: "0 8px",
-                  // Плавный переход при смене масштаба/фильтра
-                  transition: "transform 0.3s ease, filter 0.3s ease",
-                  // Если слайд активный — масштаб 1, иначе 0.9
-                  transform: isActive ? "scale(1.1)" : "scale(0.8)",
-                  // Активный — цветной, остальные — grayscale
+                  margin: "0 1vh",
+                  transition: "transform 1s ease, filter 1s ease",
+                  transform: isActive ? "scale(1)" : "scale(0.8)",
+                  transformOrigin: "bottom center", // масштабирование от нижнего центра
                   filter: isActive ? "none" : "grayscale(100%)",
-                  // Можно добавить тень или рамку
                   boxShadow: isActive
-                    ? "0 2px 8px rgba(0,0,0,0.15)"
-                    : "0 1px 3px rgba(0,0,0,0.1)",
-                  borderRadius: "8px",
+                    ? "0 0.25vh 0.5vh rgba(0,0,0,0.15)"
+                    : "0 0.125vh 0.375vh rgba(0,0,0,0.1)",
+                  borderRadius: "1vh",
                   overflow: "hidden",
                   background: "#fff"
                 }}
@@ -135,15 +159,10 @@ const PhotoSlider = () => {
                   alt={slide.name}
                   style={{
                     width: "100%",
-                    height: "500px",
+                    height: "75vh",
                     objectFit: "cover"
                   }}
                 />
-                {/* 
-                  Если хотите, чтобы name / role показывались внутри карточки,
-                  оставьте этот блок. Иначе — уберите.
-                */}
-
               </div>
             </div>
           );
