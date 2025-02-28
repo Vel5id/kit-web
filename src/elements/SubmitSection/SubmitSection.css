@@ -95,14 +95,18 @@
     font-size: 3vh; /* 20px -> 3vh */
     border: none;
     margin-top: 1%;
-    background-color: #005bb5;
-    color: white;
+    background-color: #fff;
+    color: #005bb5;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
   /* Hover-эффект для кнопки */
   .registration-submit-btn:hover {
-    background-color: #0067ce;
+    background-color: #005bb5;
+    color: white;
+    border-color: #fff;
+    border-width: 0.125vh;
+    border-style: solid;
   }
   

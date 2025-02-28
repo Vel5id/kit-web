@@ -2,8 +2,8 @@ import React from 'react';
 import L from 'leaflet';
 import { MapContainer, TileLayer, GeoJSON, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import geoData from './../images/data.json';
-import markerSVG from './svg/map-marker.svg'; // Импорт SVG
+import geoData from '../../images/data.json';
+import markerSVG from '../../images/svg/map-marker.svg'; // Импорт SVG
 
 // Функция для стилизации GeoJSON с использованием SVG-градиента
 const styleFeature = (feature) => ({

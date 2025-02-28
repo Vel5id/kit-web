@@ -1,5 +1,5 @@
 import React from 'react';
-import treeImage from '../images/tree.webp'; // Импортируем изображение, если понадобится
+// import treeImage from '../../images/tree.webp'; // Импортируем изображение, если понадобится
 import './SubmitSection.css';
 
 const SubmitSection = () => {
@@ -12,12 +12,12 @@ const SubmitSection = () => {
         </div>
         <div className="registration-content-container">
           <div className="registration-headline">
-            Не упустите шанс <br />
-            расширить свои <br />
-            возможности!
+            Присоединяйтесь к <br />
+            150+ мероприятиям в год!<br />
+            
           </div>
           <div className="registration-form-content">
-            Присоединяйтесь к бизнес-сообществу KIT сегодня!
+            Получите ценнейший опыт, поддержку от <br/> единомышленников и новые деловые контакты
             <input
               type="text"
               name="name"

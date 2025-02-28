@@ -1,15 +1,15 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import ev1 from '../images/ev1.jpg';
-import ev2 from '../images/ev2.jpg';
-import ev3 from '../images/ev3.jpg';
-import ev4 from '../images/ev4.jpg';
-import ev5 from '../images/ev5.jpg';
-import ev6 from '../images/ev6.jpg';
-import ev7 from '../images/ev7.jpg';
-import ev8 from '../images/ev8.jpg';
-import ev9 from '../images/ev9.jpg';
+import ev1 from '../../images/ev1.jpg';
+import ev2 from '../../images/ev2.jpg';
+import ev3 from '../../images/ev3.jpg';
+import ev4 from '../../images/ev4.jpg';
+import ev5 from '../../images/ev5.jpg';
+import ev6 from '../../images/ev6.jpg';
+import ev7 from '../../images/ev7.jpg';
+import ev8 from '../../images/ev8.jpg';
+import ev9 from '../../images/ev9.jpg';
 
 const EventSlider = ({ setSwiperRef, onSlideChange }) => {
   const events = [

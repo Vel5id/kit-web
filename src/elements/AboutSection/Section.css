@@ -18,7 +18,7 @@ html, body {
 
 /* Стили для test_container */
 .test_container {
-  background-image: url('../images/home-bg.webp');
+  background-image: url('../../images/home-bg.webp');
   background-size: cover;
   background-position: center;
   width: 100vw;           /* 100% ширины вьюпорта */
@@ -216,7 +216,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100px;
-  background: url('../images/cube.png') no-repeat top center;
+  background: url('../../images/cube.png') no-repeat top center;
   background-size: cover;
   z-index: -1;
 }
@@ -228,7 +228,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100px;
-  background: url('../images/cube.png') no-repeat bottom center;
+  background: url('../../images/cube.png') no-repeat bottom center;
   background-size: cover;
   z-index: -1;
 }

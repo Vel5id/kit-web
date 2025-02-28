@@ -18,7 +18,7 @@
   
   /* Стили для test_container */
   .test_container {
-    background-image: url('../images/home-bg.webp');
+    background-image: url('../../images/home-bg.webp');
     background-size: cover;
     background-position: center;
     width: 100vw;           /* 100% ширины вьюпорта */

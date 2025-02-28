@@ -1,0 +1,103 @@
+/* Контейнер всего слайдера */
+.Feedbacks-slider-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Заголовок слайдера */
+.Feedbacks-slider-heading {
+  display: flex;
+
+  width: 100%;
+  font-size: 3.125vw;    /* ~60px при ширине экрана ~1920px */
+  font-weight: 700;
+  margin-bottom: 1.85vh; /* ~20px по вертикали */
+}
+
+/* Обёртка для слайдера */
+.Feedbacks-slider-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+/* Сам Swiper c "фиксированной" высотой */
+.Feedbacks-slider {
+  width: 120vw;
+  height: 80vh;
+}
+
+/* Каждый слайд занимает всю высоту контейнера */
+.Feedback-slide {
+  width: 35vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3vh;
+}
+
+/* Карточка внутри слайда */
+.Feedback-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(240, 240, 240);
+  border-radius: 3vh;
+  margin-bottom: 2.5vh;
+  margin-top: 2.5vh;
+
+  transition: box-shadow 0.3s ease;
+}
+
+/* Аналогично для Feedback-img */
+.Feedback-img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top-left-radius: 3vh;
+  border-top-right-radius: 3vh;
+}
+
+/* Заголовок карточки (шапка) */
+.Feedback-card__heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 5.56vh;        /* ~60px по вертикали */
+  margin-bottom: 0.93vh; /* ~10px */
+}
+
+/* Заголовок */
+.Feedback-card__title {
+  width: 100%;
+  height: 20%;
+  font-size: 0.94vw;     /* ~18px по ширине экрана */
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  color:"rgb(18, 71, 115)"
+}
+
+
+/* Описание карточки */
+.Feedback-card__desc {
+  font-size: 0.73vw;     /* ~14px */
+  line-height: 1.4;
+  height: 18.52vh;       /* ~200px */
+  overflow: hidden;
+}
+
+
+
+.Feedback-card:hover {
+  box-shadow: 0 0 20px rgba(24, 96, 155, 0.5);
+}

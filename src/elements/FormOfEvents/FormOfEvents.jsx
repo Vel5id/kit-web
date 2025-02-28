@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import EventSlider from "./EventSlider";
+import EventSlider from "../EventSection/EventSlider";
 import "./FormOfEvents.css";
 import ButtonScrollView from "./ButtonScrollView";
 

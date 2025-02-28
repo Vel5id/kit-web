@@ -5,11 +5,11 @@ import "slick-carousel/slick/slick-theme.css";
 import "./TextAnimation.css"; // импортируем наши стили
 
 // Пример импортированных изображений
-import slide1 from "../../images/1.jpg";
-import slide2 from "../../images/2.jpg";
-import slide3 from "../../images/3.jpg";
-import slide4 from "../../images/4.jpg";
-import slide5 from "../../images/5.webp";
+import slide1 from "../../../images/1.jpg";
+import slide2 from "../../../images/2.jpg";
+import slide3 from "../../../images/3.jpg";
+import slide4 from "../../../images/4.jpg";
+import slide5 from "../../../images/5.webp";
 
 const PhotoSlider = () => {
   // Состояние для текущего активного слайда

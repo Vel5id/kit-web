@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as MainLogo } from './MainLogo.svg';
+// import { ReactComponent as MainLogo } from './MainLogo.svg'; Если нужно другое лого, работать с этим
 import { ReactComponent as AdditionalLogo } from './AdditionalLogo.svg';
 import './Header.css'; // Импортируйте свои стили, если необходимо
 

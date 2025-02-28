@@ -1,7 +1,7 @@
 import React from 'react';
 import './Section.css'; // Импортируйте свои стили, если необходимо
-import VerticalSlider from './blocks/VerticalSlider';
-import { AboutAdvantsItem } from './blocks/AboutAdvantsItem';
+import VerticalSlider from '../Additional_Blocks_And_Effects/SliderBlocks/VerticalSlider';
+import { AboutAdvantsItem } from '../Additional_Blocks_And_Effects/AboutAdvantsItem';
 
 const AboutSection = () => {
     return (

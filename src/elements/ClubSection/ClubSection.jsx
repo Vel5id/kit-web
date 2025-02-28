@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import HorizontalSlider2 from './blocks/HorizontalSlider2';
+import HorizontalSlider2 from '../Additional_Blocks_And_Effects/SliderBlocks/HorizontalSlider2';
 import './ClubSection.css';
 
 const slidesData = [

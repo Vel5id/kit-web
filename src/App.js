@@ -5,8 +5,8 @@ import News from "./routes/news/news";
 import Products from "./routes/products/products";
 import Residents from "./routes/residents/residents";
 import Contacts from "./routes/contacts/contacts";
+import Header from "./elements/Header/Header"
 
-import Header from "./elements/Header";
 
 
 function App() {

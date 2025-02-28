@@ -1,23 +1,27 @@
-import DOMPurify from 'dompurify';
-import EventsSlider from '../../elements/EventsSlider.jsx';
-import MainSection from '../../elements/MainSection.jsx';
-import AboutSection from '../../elements/AboutSection.jsx';
-import Separator from '../../elements/Separator.jsx';
-import ProductSection from '../../elements/ProductSection.jsx';
-import ClubSection from '../../elements/ClubSection.jsx';
-import SubmitSection from '../../elements/SubmitSection.jsx';
-import BenefitsSlider from '../../elements/BenefitSlider.jsx';
-import MyMap from '../../elements/Map.jsx';
-import PhotoSlider from '../../elements/blocks/PhotoSlider.jsx';
-import FadeSection from './FadeInSection';
-import EventSection from '../../elements/EventSection.jsx';
-import FormOfEvents from '../../elements/FormOfEvents.jsx';
+// import DOMPurify from 'dompurify'; На будущее для защиты данных
+import MainSection from "../../elements/MainSection/MainSection"
+import AboutSection from "../../elements/AboutSection/AboutSection"
+import Separator from "../../elements/KIT_Separator/Separator"
+import ProductSection from "../../elements/ProductSection/ProductSection"
+import ClubSection from "../../elements/ClubSection/ClubSection"
+
+import SubmitSection from "../../elements/SubmitSection/SubmitSection"
+import SubmitSection2 from "../../elements/SubmitSection/SubmitSection2"
+
+import BenefitsSlider from "../../elements/BenefitsSlider/BenefitSlider"
+import CaseSlider from "../../elements/CaseSection/CaseSlider"
+import FeedbackSlider from "../../elements/FeedbaskSection/FeedbackSlider"
+
+import MyMap from "../../elements/MapSection/Map"
+import EventSection from "../../elements/EventSection/EventSection"
+import FormOfEvents from "../../elements/FormOfEvents/FormOfEvents"
+import FadeSection from "./FadeInSection"
 
 function Main() {
   return (
     <div style={{overflowY: "hidden"}}>
       <FadeSection>
-        <MainSection />
+        <MainSection/>
       </FadeSection>
       <FadeSection>
         <AboutSection />
@@ -47,7 +51,16 @@ function Main() {
         <FormOfEvents/>
       </FadeSection>
       <FadeSection>
-        <SubmitSection />
+        <SubmitSection2 />
+      </FadeSection>
+      <FadeSection>
+        <CaseSlider />
+      </FadeSection>
+      <FadeSection>
+        <FeedbackSlider />
+      </FadeSection>
+      <FadeSection>
+        <SubmitSection2 />
       </FadeSection>
     </div>
   );

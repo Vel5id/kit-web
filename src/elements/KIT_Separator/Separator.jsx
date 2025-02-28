@@ -1,7 +1,7 @@
-import separator_logo from "./svg/separator_logo.svg";
-import k from "./svg/k.svg";
-import i from "./svg/i.svg";
-import t from "./svg/t.svg";
+import separator_logo from "../../images/svg/separator_logo.svg";
+import k from "../../images/svg/k.svg";
+import i from "../../images/svg/i.svg";
+import t from "../../images/svg/t.svg";
 import React from 'react';
 import "./LogoHoverEffect.css"; // Импортируйте файл с анимацией
 
