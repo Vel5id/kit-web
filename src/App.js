@@ -6,6 +6,7 @@ import Products from "./routes/products/products";
 import Residents from "./routes/residents/residents";
 import Contacts from "./routes/contacts/contacts";
 import Header from "./elements/Header/Header"
+import Footer from "./elements/Footer/Footer"
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/news" element={<News />} />
         <Route path="/contacts" element={<Contacts />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }

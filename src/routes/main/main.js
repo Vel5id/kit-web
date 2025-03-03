@@ -21,7 +21,7 @@ import Gallery from "../../elements/GallerySection/GallerySlider"
 
 function Main() {
   return (
-    <div style={{overflowY: "hidden"}}>
+    <div style={{overflowX: "hidden"}}>
       <FadeSection>
         <MainSection/>
       </FadeSection>
@@ -67,7 +67,9 @@ function Main() {
       <FadeSection>
         <MobileApp/>
       </FadeSection>
+      <FadeSection>
         <Gallery/>
+      </FadeSection>
     </div>
   );
 }
