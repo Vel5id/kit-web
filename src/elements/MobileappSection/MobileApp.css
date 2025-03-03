@@ -1,0 +1,170 @@
+.image-container2 {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* или нужная вам высота */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .phone {
+    position: relative;
+    width: 20vw; /* При необходимости скорректируйте размер */
+    height: 85vh;
+    z-index: 2; /* Поверх фонового изображения */
+  }
+  
+  .rotate {
+    position: absolute; /* При необходимости скорректируйте размер */
+    width: 40vw;
+    height: 90vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    animation: rotateAnimation 20s linear infinite; /* Вращение */
+  }
+  
+  @keyframes rotateAnimation {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+
+/* Общие стили для "пузырей" (текстовых блоков) */
+.bubble {
+    position: absolute;
+    background: #147BD1;
+    color:rgb(240, 240, 240);
+    font-weight: 700;
+    border-radius: 20px;
+    padding: 10px 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    white-space: nowrap; /* чтобы текст не переносился, если не нужно */
+    animation: float 3s ease-in-out infinite; /* Анимация парения */
+    z-index: 2; /* Поверх фонового изображения */
+  }
+  
+  /* Ключевые кадры анимации:
+     пузырь будет плавно подниматься на 10px, а потом возвращаться */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Расположение каждого пузыря вручную (примерные координаты) */
+  .bubble7 {
+    top: 10%;
+    left: 28%;
+    animation-delay: 0s;
+  }
+  .bubble2 {
+    top: 15%;
+    right: 6%;
+    animation-delay: 0.7s;
+  }
+  .bubble3 {
+    top: 25%;
+    left: 19%;
+    animation-delay: 1.2s;
+  }
+  .bubble4 {
+    top: 30%;
+    right: 24%;
+    animation-delay: 1s;
+  }
+  .bubble5 {
+    top: 40%;
+    left: 6%;
+    animation-delay: 1.5s;
+  }
+  .bubble6 {
+    top: 56%;
+    left: 17%;
+    animation-delay: 0.8s;
+  }
+  .bubble1 {
+    top: 80%;
+    left: 6%;
+    animation-delay: 2.5s;
+  }
+  .bubble8 {
+    top: 45%;
+    right: 8%;
+    animation-delay: 0.7s;
+  }
+  .bubble9 {
+    top: 60%;
+    right: 13%;
+    animation-delay: 1.3s;
+  }
+  .bubble10 {
+    top: 74%;
+    right: 6%;
+    animation-delay: 1.4s;
+  }
+
+/* Обёртка, чтобы кнопки шли рядом и были по центру */
+.download-buttons {
+  display: flex;
+  width: 98vw;
+  justify-content: center;
+  padding-top: 5vh;
+  gap: 5vw;           /* 20px → 2vw *//* верх/низ: 20px → 2vh, авто по бокам */
+}
+
+/* Общие стили для кнопок */
+.download-btn {
+  display: inline-flex;
+  width: 25vw;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #147BD1;
+  color: #fff;
+  font-size: 1.6vw;          /* 16px → 1.6vw */
+  font-weight: 500;
+  padding: 1.2vh 2.4vw;      /* 12px 24px → 1.2vh (вертикально) и 2.4vw (горизонтально) */
+  border-radius: 1.8vw;      /* 8px → 0.8vw */
+  transition: background 0.3s ease,
+              transform 0.3s ease,
+              color 0.3s ease;
+}
+
+/* Изменение стиля при наведении */
+.download-btn:hover {
+  transform: scale(1.05);    /* Увеличиваем кнопку на 5% */
+  background-color: #fff;    /* Фон становится белым */
+  color: #147BD1;            /* Текст и иконка становятся синими */
+  border-width: 0.1vw;
+  border-style: solid;
+  border-color: #147BD1;
+}
+
+/* Фокус (для доступности) */
+.download-btn:focus {
+  outline: 0.2vw solid #0e5ea0;  /* 2px → 0.2vw */
+}
+
+/* Иконка справа от текста */
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 0.8vw;  /* 8px → 0.8vw */
+}
+
+/* Иконка наследует цвет от .download-btn (currentColor),
+   поэтому при hover она становится синими */
+.download-btn svg {
+  width: 2.4vw;   /* 24px → 2.4vw */
+  height: 2.4vw;  /* 24px → 2.4vw */
+  fill: currentColor;
+}

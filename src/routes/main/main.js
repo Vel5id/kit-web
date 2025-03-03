@@ -16,6 +16,7 @@ import MyMap from "../../elements/MapSection/Map"
 import EventSection from "../../elements/EventSection/EventSection"
 import FormOfEvents from "../../elements/FormOfEvents/FormOfEvents"
 import FadeSection from "./FadeInSection"
+import MobileApp from "../../elements/MobileappSection/MobileApp"
 
 function Main() {
   return (
@@ -61,6 +62,9 @@ function Main() {
       </FadeSection>
       <FadeSection>
         <SubmitSection2 />
+      </FadeSection>
+      <FadeSection>
+        <MobileApp/>
       </FadeSection>
     </div>
   );
