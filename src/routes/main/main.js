@@ -17,6 +17,7 @@ import EventSection from "../../elements/EventSection/EventSection"
 import FormOfEvents from "../../elements/FormOfEvents/FormOfEvents"
 import FadeSection from "./FadeInSection"
 import MobileApp from "../../elements/MobileappSection/MobileApp"
+import Gallery from "../../elements/GallerySection/GallerySlider"
 
 function Main() {
   return (
@@ -66,6 +67,7 @@ function Main() {
       <FadeSection>
         <MobileApp/>
       </FadeSection>
+        <Gallery/>
     </div>
   );
 }
