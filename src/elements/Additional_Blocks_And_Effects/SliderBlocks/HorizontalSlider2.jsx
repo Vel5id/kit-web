@@ -46,7 +46,7 @@ const HorizontalSlider2 = ({
               flexDirection: "column", // для организации двух рядов
               gap: "10px", // отступ между рядами
               justifyContent:"center",
-              backgroundColor:"rgb(240, 240, 240)"
+              backgroundColor:"transparent"
             }}
           >
             {/* Первый ряд (первые 2 элемента группы) */}

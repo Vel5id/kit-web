@@ -24,6 +24,9 @@ const Header = () => {
           {/* Навигационное меню – 5 кнопок */}
           <div>
           <ul className="header__menu">
+            <li id="main" className="menu-item">
+              <a href="/">Главная</a>
+            </li>
             <li id="about" className="menu-item">
               <a href="/about">О сообществе</a>
             </li>

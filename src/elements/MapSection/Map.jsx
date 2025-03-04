@@ -106,13 +106,15 @@ const MyMap = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          paddingTop: "20vh",
-          paddingBottom: "20vh",
+          paddingBottom: "10vh",
+          paddingTop:"5vh",
           backgroundColor: "white",
           flexDirection:"column"
         }}
       >
-        <div style={{width:"90%", backgroundColor:""}}> <div style={{fontSize:"7vh", fontWeight:"600", color:"rgb(24, 96, 155)"}}>Филиалы Казахстана</div></div>
+        <div style={{width:"90%", backgroundColor:""}}> 
+          <div style={{fontSize:"4.5vh", fontWeight: 700, fontSize:"12vh", marginLeft:"3vh" ,color:"rgb(24, 96, 155)"}}>Филиалы Казахстана</div>
+        </div>
         <MapContainer
           center={[48.505, 67.09]}
           zoom={4.75}

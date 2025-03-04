@@ -93,7 +93,8 @@ const ClubSection = () => {
 
   return (
     <div>
- <div className="DivMain" style={{display: "flex", flexDirection: "column", color: "darkblue", width: "98%", height: "62vh", marginTop: "5%", backgroundColor:"rgb(240, 240, 240)", alignItems:"center", justifyContent:"center", marginLeft:"1%",marginTop:"20vh", marginBottom:"20vh", borderRadius:"4vh"}}>
+                  <div className="text-info-high" style={{fontSize:"4.5vh", fontWeight: 700, fontSize:"12vh", marginLeft:"3vh" ,color:"rgb(24, 96, 155)"}}>Клубы</div>
+ <div className="DivMain" style={{display: "flex", flexDirection: "column", color: "darkblue", width: "98vw", height: "48vh", marginTop: "5%", backgroundColor:"rgb(240, 240, 240)", alignItems:"center", justifyContent:"center", marginLeft:"1%",marginTop:"5vh", marginBottom:"20vh", borderRadius:"4vh", padding:"1vh 1vw"}}>
         <div>
           <div style={{display:"flex", width:"200vh", height:"12vh", flexDirection:"row", padding:"1.5vh", }}>
             <div style={{display:"flex", width:"100vh", height:"100%", flexDirection:"row", justifyContent:"flex-start", alignItems:"center", fontSize:"8vh", fontWeight:"600", color:"rgb(24, 96, 155)"}}>18 Клубов</div>
@@ -111,14 +112,14 @@ const ClubSection = () => {
             </div>
           </div>
         </div>
-        <div style={{display:"flex", width:"100%", height: "47vh", justifyContent:"center", alignItems:"center", }}>
+        <div style={{display:"flex", width:"100%", height: "32vh", justifyContent:"center", alignItems:"center",backgroundColor:"transparent" }}>
           <HorizontalSlider2
             swiperRef={swiperRef}  // Передаём ref в слайдер
             slides={slidesData}      // Передаём все слайды
             slidesPerView={1}
             spaceBetween={30}
             sliderWidth="200vh"
-            sliderHeight="45vh"
+            sliderHeight="32vh"
             autoplayDelay={200000}
           />
         </div>

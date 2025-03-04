@@ -1,9 +1,10 @@
 // News.js
+import MyMap from "../../elements/MapSection/Map"
+
 function Contacts() {
     return (
       <div>
-        <h1>Контакты</h1>
-        <p>Последние обновления.</p>
+        <MyMap/>
       </div>
     );
   }

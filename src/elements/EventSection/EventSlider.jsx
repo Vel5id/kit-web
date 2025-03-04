@@ -83,15 +83,17 @@ const EventSlider = ({ setSwiperRef, onSlideChange }) => {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    width: '140vh',
+    marginRight:"5vw",
+    width: '72vw',
     height: '62vh',
     boxSizing: 'border-box',
     backgroundColor: 'rgb(240, 240, 240)',
-    borderRadius: "2vh"
+    borderRadius: "2vh",
+
   };
 
   const imageStyle = {
-    width: '100vh',
+    width: '42vw',
     height: '62vh',
     objectFit: 'cover',
     borderTopLeftRadius: "2vh",
@@ -101,7 +103,7 @@ const EventSlider = ({ setSwiperRef, onSlideChange }) => {
   const eventTextStyle = {
     marginLeft: "5vh",
     marginTop: "5vh",
-    width: '100%',
+    width: '22.5vw',
     height: '62vh',
     display: 'flex',
     flexDirection: 'column',
@@ -133,8 +135,8 @@ const EventSlider = ({ setSwiperRef, onSlideChange }) => {
       onSlideChange={(swiper) => onSlideChange(swiper.activeIndex)}
     >
       {events.map(event => (
-        <SwiperSlide key={event.id} style={{ padding: "0vh", paddingLeft: "4vh" }}>
-          <div style={slideStyle}>
+        <SwiperSlide key={event.id} style={{ padding: "0vh", margin:"0px",width:"74vw" }}>
+          <div style={slideStyle} >
             <img src={event.image} alt={event.title} style={imageStyle} />
             <div style={eventTextStyle}>
               <div style={titleStyle}>{event.title}</div>

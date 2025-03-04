@@ -1,0 +1,46 @@
+.slide-text-container {
+    margin-bottom: -10vh;
+    text-align: left;
+    position: relative;
+    bottom: -5vh;
+    right: -70vh;
+    width: 125vh;
+    overflow: hidden;
+    /* Задайте нужную высоту контейнера, чтобы анимация выглядела корректно */
+    height: 15vh;
+  }
+  
+  .slide-text-out {
+    position: absolute;
+    width: 100%;
+    animation: slideOut 0.6s forwards;
+  }
+  
+  .slide-text-in {
+    position: absolute;
+    width: 100%;
+    animation: slideIn 0.6s forwards;
+  }
+  
+  @keyframes slideOut {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

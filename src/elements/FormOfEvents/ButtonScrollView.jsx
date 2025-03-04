@@ -18,7 +18,7 @@ const ButtonScrollView = ({ handleButtonClick, activeSlide }) => {
     display: "flex",
     flexDirection: "column",
     gap: "1.5vh",
-    width: "50vh",
+    width: "22vw",
     height: "62vh",
     backgroundColor: "rgb(240, 240, 240)",
     overflowY: "auto",

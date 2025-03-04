@@ -1,23 +1,23 @@
 import React from 'react';
 // import treeImage from '../../images/tree.webp'; // Импортируем изображение, если понадобится
-import './SubmitSection.css';
+import './SubmitSectionAbout.css';
 
-const SubmitSection = () => {
+const SubmitSection_About = () => {
   return (
-    <div className="submit-section-container" style={{display:"flex",alignItems:"center", alignContent:"center"}}>
-      <section className="registration-section">
+    <div className="submit-section-about-container">
+      <section className="registration-section-about">
         <div className="registration-image-wrapper">
           {/* Здесь можно разместить <img src={treeImage} ... />, если потребуется */}
           <p className="image-placeholder">img</p>
         </div>
         <div className="registration-content-container">
           <div className="registration-headline">
-            Присоединяйтесь к <br />
-            150+ мероприятиям в год!<br />
-            
+            Не упустите шанс <br />
+            расширить свои <br />
+            возможности!
           </div>
           <div className="registration-form-content">
-            Получите ценнейший опыт, поддержку от <br/> единомышленников и новые деловые контакты
+            Присоединяйтесь к бизнес-сообществу KIT сегодня!
             <input
               type="text"
               name="name"
@@ -68,4 +68,4 @@ const SubmitSection = () => {
   );
 };
 
-export default SubmitSection;
+export default SubmitSection_About;

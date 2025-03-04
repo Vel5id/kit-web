@@ -11,10 +11,10 @@ const Footer = () => {
           {/* Контактная информация */}
           <div className="footer__contact">
             <div className="footer__phone">
-              <strong>Телефон:</strong> +7 701 572 1298
+              <strong>Телефон:</strong> +7 ххх ххх хххх
             </div>
             <div className="footer__address">
-              <strong>Адрес:</strong> г. Астана, Микрорайон Самал, 11, 1 кабинет, 2 этаж
+              <strong>Адрес:</strong> г. Костанай, Район хххх, хх, х кабинет, 2 этаж
             </div>
           </div>
 
