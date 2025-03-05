@@ -1,0 +1,18 @@
+.news-page {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+  
+  .news-item-link {
+    text-decoration: none;
+  }
+  
+  .truncated-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 12; /* Ограничение до 12 строк */
+    overflow: hidden;
+  }
+  

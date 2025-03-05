@@ -208,30 +208,9 @@ html, body {
   position: relative;
 }
 
-/* Декоративные фоны (верхний и нижний куб) */
-.bg-cube-top::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background: url('../../images/cube.png') no-repeat top center;
-  background-size: cover;
-  z-index: -1;
-}
 
-.bg-cube-bottom::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background: url('../../images/cube.png') no-repeat bottom center;
-  background-size: cover;
-  z-index: -1;
-}
+
+
 
 .about__title {
   font-size: 2rem;

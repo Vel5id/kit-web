@@ -7,10 +7,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './GallerySlider.css';
-import gallery1 from "../../images/gallery1.jpg"
-import gallery2 from "../../images/gallery2.jpg"
-import gallery3 from "../../images/gallery3.jpg"
-import gallery4 from "../../images/gallery4.jpg"
+import gallery1 from "../../images/Gallery/gallery1.jpg"
+import gallery2 from "../../images/Gallery/gallery2.jpg"
+import gallery3 from "../../images/Gallery/gallery3.jpg"
+import gallery4 from "../../images/Gallery/gallery4.jpg"
 
 const gallerysData = [
   {

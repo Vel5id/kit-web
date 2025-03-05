@@ -7,10 +7,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './CaseSlider.css';
-import case1 from "../../images/case1.png"
-import case2 from "../../images/case2.webp"
-import case3 from "../../images/case3.png"
-import case4 from "../../images/case4.png"
+import case1 from "../../images/Case/case1.png"
+import case2 from "../../images/Case/case2.webp"
+import case3 from "../../images/Case/case3.png"
+import case4 from "../../images/Case/case4.png"
 
 const casesData = [
   {
