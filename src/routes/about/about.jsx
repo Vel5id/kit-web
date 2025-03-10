@@ -7,6 +7,7 @@ import IdeoligyView from '../../elements/about_elements/IdeoligyView/IdeoligyVie
 import LoyalSlider from '../../elements/about_elements/LoyalSlider/LoyalSlider';
 import FeedbacksSlider2 from '../../elements/about_elements/FeedBack_About/FeedbackSlider2';
 import SocialPlus from '../../elements/about_elements/SocialPlus/SocialPlus';
+import HotelDiscountSlider from '../../elements/Additional_Blocks_And_Effects/SliderBlocks/HotelDiscountSlider';
 
 const About = () => {
   useEffect(() => {
@@ -21,7 +22,7 @@ const About = () => {
     <div className="about-page">
       <AboutMain/>
       <IdeoligyView/>
-      <LoyalSlider/>
+      <HotelDiscountSlider/>
       <FeedbacksSlider2/>
       <TeamSection/>
       <SubmitSectionAbout/>

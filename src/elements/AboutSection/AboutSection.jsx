@@ -5,10 +5,10 @@ import { AboutAdvantsItem } from '../Additional_Blocks_And_Effects/AboutAdvantsI
 
 const AboutSection = () => {
     return (
-      <>
-        <div className="DivMain" style={{display: "flex", flexDirection: "column",color: "darkblue",width: "100%",height: "102vh", marginTop: "3vh", marginBottom:"20vh"}}>
+      <div style={{display:"flex",width:"100vw",height:"120vh",justifyContent:"center", alignItems:"center"}}>
+        <div className="DivMain" style={{display: "flex", flexDirection: "column",color: "darkblue",width: "98vw",height: "102vh", marginTop: "3vh", marginBottom:"20vh"}}>
             <div className="DivMain" style={{display: "flex", flexDirection: "column",color: "darkblue",width: "100%",height: "20vh"}}>
-            <div className="text-info-high" style={{fontSize:"4.5vh", fontWeight: 600, fontSize:"12vh", paddingBottom:"3vh", marginLeft:"3vh" ,color:"rgb(24, 96, 155)"}}>О СООБЩЕСТВЕ</div>
+            <div className="text-info-high" style={{ fontWeight: 600, fontSize:"12vh", paddingBottom:"3vh", marginLeft:"3vh" ,color:"rgb(24, 96, 155)"}}>О СООБЩЕСТВЕ</div>
             </div>
             <div className="DivMain" style={{display: "flex", flexDirection: "row",color: "darkblue",width: "100%",height: "92vh"}}>
                 <div className="DivMain" style={{display: "flex", flexDirection: "column",color: "darkblue",width: "25%",height: "92vh", paddingLeft: "1.5vh", paddingTop: "1.5vh"}}>
@@ -53,7 +53,7 @@ const AboutSection = () => {
                 </div>
             </div>
         </div>
-      </>
+      </div>
     );
   };
   

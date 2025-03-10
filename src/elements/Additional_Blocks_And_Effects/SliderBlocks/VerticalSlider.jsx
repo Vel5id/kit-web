@@ -31,7 +31,7 @@ const VerticalSlider = () => {
           disableOnInteraction: false,
         }}
         modules={[Mousewheel, Autoplay]}
-        style={{width:"50vh", height:"102vh"}}
+        style={{width:"23vw", height:"102vh", borderRadius:"0.5vw"}}
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index} style={{ backgroundColor: "rgb(240, 240, 240)", borderRadius:"15px" }}>

@@ -4,25 +4,29 @@ import './PastNewsBlock.css';
 
 const PastNewsBlock = ({ pastNews }) => {
   return (
-    <div style={{display:"flex", width:"98vw", height:"98vh",backgroundColor:"greenyellow" }}>
-      <h2>Прошедшие новости</h2>
-      <div className="news-list">
-        {pastNews &&
-          pastNews.map((item) => (
-            <Link key={item.id} to={`/news/${item.id}`} className="news-item-link">
-              <div className="news-item">
-                {item.image && (
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    style={{objectFit:"cover", maxwidth:"20vw", height:"34vh", borderRadius:"2vh", margin:"0px", padding:"0px"}}
-                  />
-                )}
-                <h3>{item.title}</h3>
-                <p>{item.summary}</p>
-              </div>
-            </Link>
-          ))}
+    <div className="past-news-container">
+      <div className="past-news-header">Прошедшие новости</div>
+      <div className="past-news-list">
+        {pastNews && pastNews.map((item) => (
+          <Link
+            key={item.id}
+            to={`/news/${item.id}`}
+            className="past-news-item-link"
+            state={{ title: item.title, summary: item.summary, image: item.image }}
+          >
+            <div className="past-news-item">
+              {item.image && (
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="past-news-image"
+                />
+              )}
+              <div className="past-news-title">{item.title}</div>
+              <div className="past-news-summary truncated-text">{item.summary}</div>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );

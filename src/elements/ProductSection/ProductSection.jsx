@@ -28,13 +28,13 @@ const ProductSection = () => {
   };
 
   return (
-    <div>
-            <div className="text-info-high" style={{fontSize:"4.5vh", fontWeight: 700, fontSize:"12vh", marginLeft:"3vh" ,color:"rgb(24, 96, 155)"}}>Продукты</div>
- <div className="DivMain" style={{display: "flex", flexDirection: "column", color: "darkblue", width: "98vw", height: "40vh", backgroundColor:"rgb(240, 240, 240)", alignItems:"center", justifyContent:"center", marginLeft:"1%",marginTop:"5vh", marginBottom:"20vh", borderRadius:"4vh", padding:"1vh 1vw"}}>
+    <div style={{display:"flex",width:"100vw",height:"120vh",justifyContent:"center", alignItems:"center", flexDirection:"column"}}>
+            <div className="text-info-high" style={{fontWeight: 700, fontSize:"12vh", marginLeft:"3vw" ,color:"rgb(24, 96, 155)", alignSelf:"start"}}>Продукты</div>
+ <div className="DivMain" style={{display: "flex", flexDirection: "column", color: "darkblue", width: "95vw", height: "40vh", backgroundColor:"rgb(240, 240, 240)", alignItems:"center", justifyContent:"center", marginLeft:"1%",marginTop:"5vh", marginBottom:"20vh", borderRadius:"4vh", padding:"1vh 1vw"}}>
         <div>
-          <div style={{display:"flex", width:"200vh", height:"12vh", flexDirection:"row", padding:"1.5vh", }}>
-            <div style={{display:"flex", width:"100vh", height:"100%", flexDirection:"row", justifyContent:"flex-start", alignItems:"center", fontSize:"8vh", fontWeight:"600", color:"rgb(24, 96, 155)"}}>9 Продуктов</div>
-            <div style={{display:"flex", width:"100vh", height:"100%", flexDirection:"row", justifyContent:"flex-end", alignItems:"center", gap:"15px"}}>
+          <div style={{display:"flex", width:"92vw", height:"12vh", flexDirection:"row", padding:"1.5vh", }}>
+            <div style={{display:"flex", width:"92vw", height:"100%", flexDirection:"row", justifyContent:"flex-start", alignItems:"center", fontSize:"4vw", fontWeight:"600", color:"rgb(24, 96, 155)"}}>9 Продуктов</div>
+            <div style={{display:"flex", width:"92vw", height:"100%", flexDirection:"row", justifyContent:"flex-end", alignItems:"center", gap:"15px"}}>
               <div style={{fontSize:"2.5vh"}} >Направления:  </div>
               <button className="button" style={{fontSize:"2.5vh"}} onClick={() => handleButtonClick(0)}>
                 K (Knowledge)
@@ -48,13 +48,13 @@ const ProductSection = () => {
             </div>
           </div>
         </div>
-        <div style={{display:"flex", width:"100%", height:"38vh", justifyContent:"center", alignItems:"center"}}>
+        <div style={{display:"flex", width:"92vw", height:"38vh", justifyContent:"center", alignItems:"center"}}>
           <HorizontalSlider
             swiperRef={swiperRef}  // Передаём ref в слайдер
             slides={slidesData}      // Передаём все слайды
             slidesPerView={3}
             spaceBetween={30}
-            sliderWidth="200vh"
+            sliderWidth="92vw"
             sliderHeight="18vh"
             autoplayDelay={2000}
           />

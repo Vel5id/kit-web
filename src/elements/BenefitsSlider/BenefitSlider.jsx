@@ -76,12 +76,13 @@ const BenefitsSlider = () => {
         <Swiper
           spaceBetween={30}
           slidesPerView={3}
-          navigation
+
           pagination={{ clickable: true }}
           loop={true}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           modules={[Navigation, Autoplay]}
           className="benefits-slider"
+          style={{backgroundColor:"transparent"}}
         >
           {benefitsData.map((item, index) => (
             <SwiperSlide key={index} className="benefit-slide">
